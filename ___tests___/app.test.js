@@ -6,7 +6,8 @@ import {
   allNumbersGreaterThanZero,
   someNumbersAreOdd,
   evensOnlyAndDoubleArray,
-  findItem
+  findItem,
+  sortArray
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -74,5 +75,13 @@ describe('findItem Tests:', ()=> {
   })
   test('Should return undefined if passed arg is not present in array', ()=> {
     expect(findItem([1,3,5,7],8)).toEqual(undefined)
+  })
+})
+describe('sortArray Tests:', ()=> {
+  test('Should sort array in descending order', ()=> {
+    expect(sortArray([1,2,3,4])).toEqual([4,3,2,1])
+  })
+  test('Should return undefined if passed arg is not present in array', ()=> {
+    expect(sortArray([7,8,5,2])).toEqual([8,7,5,2])
   })
 })

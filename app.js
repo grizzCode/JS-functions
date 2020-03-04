@@ -41,9 +41,15 @@ export const findItem = (numberArray, num)=> {
   return numberArray.find(item => item === num)
 }
 
+// Sort array in descending order
+export const sortArray = (numberArray)=> {
+  return numberArray.sort( (a, b) => b - a )
+}
 
 
-// sortArray(numberArray) //=> [4,3,2,1] *desc*
+
+
+
 // artists = [
 //   {name: 'a', likes:100},
 //   {name: 'c', likes:99},
