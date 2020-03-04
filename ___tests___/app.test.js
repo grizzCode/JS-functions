@@ -7,7 +7,8 @@ import {
   someNumbersAreOdd,
   evensOnlyAndDoubleArray,
   findItem,
-  sortArray
+  sortArray,
+  doubleLikes
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -83,5 +84,22 @@ describe('sortArray Tests:', ()=> {
   })
   test('Should return undefined if passed arg is not present in array', ()=> {
     expect(sortArray([7,8,5,2])).toEqual([8,7,5,2])
+  })
+})
+
+// Part 2
+describe('doubleLikes Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'c', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should double likes of object', ()=> {
+    expect(doubleLikes(artists)).toEqual([
+      {name: 'a', likes:200},
+      {name: 'c', likes:198},
+      {name: 'c', likes:202}, 
+    ])
   })
 })

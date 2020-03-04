@@ -48,7 +48,7 @@ export const sortArray = (numberArray)=> {
 
 
 // ARRAY ITERATOR METHODS ON Objects
-artists = [
+const artists = [
   {name: 'a', likes:100},
   {name: 'c', likes:99},
   {name: 'c', likes:101}, 
