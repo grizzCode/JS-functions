@@ -26,9 +26,9 @@ export const allNumbersGreaterThanZero = (numberArray)=> {
   return numberArray.every(x => x > 0)
 }
 
-// // return true if some item greater than 0
+// // return true if some item odd in array
 export const someNumbersAreOdd = (numberArray)=> {
-  return numberArray.some(x => x > 0)
+  return numberArray.some(x => x % 2 != 0)
 }
 
 // // return array double and even
@@ -61,19 +61,20 @@ export const doubleLikes = (artists)=> {
   }
   return artists
 }
-// // => [
-// //   {name: 'a', likes:200},
-// //   {name: 'c', likes:198},
-// //   {name: 'c', likes:202},  
-// // ]; 
+
 
 // moreThan100Likes(artists)// =>[ {name: 'c', likes:101} ]; // use filter
-// //  return an array of strings of artist name
+//  return an array of strings of artist name
 
 // justArtistMoreThan100Likes(artists) //=> ['c']; // use filter
-// // get total number of likes fo all artists
 
+
+
+
+// // get total number of likes for all artists
 // numberOfLikes(artists) //=> 300; // get all likes
+
+
 // // find an item method. Returns 'not found' if not found
 
 // findObjByName(artists, 'a') // => {name: 'a', likes:200}

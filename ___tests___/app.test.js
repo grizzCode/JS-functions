@@ -53,11 +53,11 @@ describe('allNumbersGreaterThanZero Tests:', ()=> {
 })
 
 describe('someNumbersAreOdd Tests:', ()=> {
-  test('Should return true if any item in array is > 0', ()=> {
+  test('Should return true if any item in array is odd', ()=> {
     expect(someNumbersAreOdd([1,2,3,4])).toEqual(true)
   })
-  test('Should return false if no item in array is > 0', ()=> {
-    expect(allNumbersGreaterThanZero([0,0,0,0])).toEqual(false)
+  test('Should return false if no item in array is odd', ()=> {
+    expect(someNumbersAreOdd([6,4,2,2])).toEqual(false)
   })
 })
 
