@@ -47,18 +47,20 @@ export const sortArray = (numberArray)=> {
 }
 
 
+// ARRAY ITERATOR METHODS ON Objects
+artists = [
+  {name: 'a', likes:100},
+  {name: 'c', likes:99},
+  {name: 'c', likes:101}, 
+]
 
-
-
-// artists = [
-//   {name: 'a', likes:100},
-//   {name: 'c', likes:99},
-//   {name: 'c', likes:101}, 
-// ]
-// // ARRAY ITERATOR METHODS ON Objects with name age 
-// // doubles likes of artist
-
-// doubleLikes(artists)
+// doubles likes of artist
+export const doubleLikes = (artists)=> {
+  for (let i of artists) {
+    i.likes = i.likes * 2; 
+  }
+  return artists
+}
 // // => [
 // //   {name: 'a', likes:200},
 // //   {name: 'c', likes:198},
