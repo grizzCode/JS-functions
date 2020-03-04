@@ -3,6 +3,7 @@ import {
   doubleArray,
   evensOnlyArray,
   arraySum,
+  allNumbersGreaterThanZero,
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -33,5 +34,13 @@ describe('sumArray Tests:', ()=> {
   })
   test('sumArray should sum all nums in array', ()=> {
     expect(arraySum([10,20,30,40])).toEqual(100)
+  })
+})
+describe('allNumbersGreaterThanZero Tests:', ()=> {
+  test('allNumbersGreaterThanZero should return true if all array items are > zero', ()=> {
+    expect(allNumbersGreaterThanZero([1,2,3,4])).toEqual(true)
+  })
+  test('allNumbersGreaterThanZero should return true if all array items are > zero', ()=> {
+    expect(allNumbersGreaterThanZero([0,1,1,1])).toEqual(false)
   })
 })

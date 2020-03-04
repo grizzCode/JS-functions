@@ -3,14 +3,8 @@ export const originalArray = (array) => {
   return array
 }
 
-// EXPORT ALL AS FUNCTIONS AND KEEP THE NAMES THE SAME
-// ways to export
-// export const methodName = (param) => {
-// }
-// ----or---------
-// export methodName function(param){
-// }
 const numberArray = [1,2,3,4]
+
 // ARRAY ITERATOR METHODS
 // return array with double values in array
 export const doubleArray = (numberArray)=> {
@@ -30,10 +24,12 @@ export const arraySum = (numberArray)=> {
   return result
 }
 
-
-//  hint use reduce
 // // return true if every item greater than 0
-// allNumbersGreaterThanZero(numberArray) // => true; use every
+export const allNumbersGreaterThanZero = (numberArray)=> {
+  let result = numberArray.every(x => x > 0)
+  return result
+}
+
 // // return true if some item greater than 0
 // someNumbersAreOdd(numberArray) // => true; use some
 // // return array double and even
