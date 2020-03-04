@@ -8,34 +8,41 @@ const numberArray = [1,2,3,4]
 // ARRAY ITERATOR METHODS
 // return array with double values in array
 export const doubleArray = (numberArray)=> {
-  let result = numberArray.map(item => item * 2)
-  return result
+  return numberArray.map(item => item * 2)
 }
 
 // return array with all even numbers
 export const evensOnlyArray = (numberArray)=> {
-  let result = numberArray.filter(item => item % 2 === 0)
-  return result
+  return numberArray.filter(item => item % 2 === 0)
 }
 
 // return array with sum of numbers
 export const arraySum = (numberArray)=> {
-  let result = numberArray.reduce((sum,current)=> sum + current, 0)
-  return result
+  return numberArray.reduce((sum,current)=> sum + current, 0)
 }
 
 // // return true if every item greater than 0
 export const allNumbersGreaterThanZero = (numberArray)=> {
-  let result = numberArray.every(x => x > 0)
-  return result
+  return numberArray.every(x => x > 0)
 }
 
 // // return true if some item greater than 0
-// someNumbersAreOdd(numberArray) // => true; use some
+export const someNumbersAreOdd = (numberArray)=> {
+  return numberArray.some(x => x > 0)
+}
+
 // // return array double and even
-// evensOnlyAndDoubleArray(numberArray) // => [4,8]; // use map and filter
-// // find an item method return 'not found' if not found
-// findItem(numberArray, 1) //=> 1
+export const evensOnlyAndDoubleArray = (numberArray)=> {
+  return numberArray.filter(item=> item % 2 === 0).map(item => item * 2)
+}
+
+// find an item method return 'not found' if not found
+export const findItem = (numberArray, num)=> {
+  return numberArray.find(item => item === num)
+}
+
+
+
 // sortArray(numberArray) //=> [4,3,2,1] *desc*
 // artists = [
 //   {name: 'a', likes:100},
