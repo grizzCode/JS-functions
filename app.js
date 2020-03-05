@@ -87,9 +87,7 @@ export const findObjByName = (artists, name) => {
   return found
 }
 
-
-// => {name: 'a', likes:200}
-
-
 // returns array of artist sorted by likes
-// sortArtistByName(artists)
+export const sortArtistByName = (artists) => {
+  return artists.sort( (a, b) => b.likes - a.likes )
+}

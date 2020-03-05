@@ -12,7 +12,8 @@ import {
   moreThan100Likes,
   justArtistMoreThan100Likes,
   numberOfLikes,
-  findObjByName
+  findObjByName,
+  sortArtistByName
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -158,5 +159,21 @@ describe('findObjByName Test:', ()=> {
   })
   test('Should return not found for objects not in array', ()=> {
     expect(findObjByName(artists, 'd')).toEqual('not found')
+  })
+})
+
+describe('sortArtistByName Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'b', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should return array sorted by most likes to least', ()=> {
+    expect(sortArtistByName(artists)).toEqual([
+      {name: 'c', likes:101}, 
+      {name: 'a', likes:100},
+      {name: 'b', likes:99}
+    ])
   })
 })
