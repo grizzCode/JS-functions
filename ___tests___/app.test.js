@@ -11,7 +11,8 @@ import {
   doubleLikes,
   moreThan100Likes,
   justArtistMoreThan100Likes,
-  numberOfLikes
+  numberOfLikes,
+  findObjByName
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -142,5 +143,20 @@ describe('numberOfLikes Test:', ()=> {
   
   test('Should return sum of all likes in array', ()=> {
     expect(numberOfLikes(artists)).toEqual(300)
+  })
+})
+
+describe('findObjByName Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'b', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should return object that matches passed param', ()=> {
+    expect(findObjByName(artists, 'a')).toEqual({name: "a", likes: 100})
+  })
+  test('Should return not found for objects not in array', ()=> {
+    expect(findObjByName(artists, 'd')).toEqual('not found')
   })
 })

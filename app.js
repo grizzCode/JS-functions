@@ -78,9 +78,18 @@ export const numberOfLikes = (artists) => {
   return artists.reduce((sum,current) => sum + current.likes, 0)
 } 
 
-// // find an item method. Returns 'not found' if not found
+// find an item method. Returns 'not found' if not found
+export const findObjByName = (artists, name) => {
+  let found = (artists.find(item => item.name === name)) 
+  if (found === undefined){
+    return 'not found'
+  }
+  return found
+}
 
-// findObjByName(artists, 'a') // => {name: 'a', likes:200}
-// // returns array of artist sorted by likes
 
+// => {name: 'a', likes:200}
+
+
+// returns array of artist sorted by likes
 // sortArtistByName(artists)
