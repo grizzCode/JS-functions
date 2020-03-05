@@ -8,7 +8,8 @@ import {
   evensOnlyAndDoubleArray,
   findItem,
   sortArray,
-  doubleLikes
+  doubleLikes,
+  moreThan100Likes
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -91,15 +92,29 @@ describe('sortArray Tests:', ()=> {
 describe('doubleLikes Test:', ()=> {
   let artists = [
     {name: 'a', likes:100},
-    {name: 'c', likes:99},
+    {name: 'b', likes:99},
     {name: 'c', likes:101}, 
   ]
   
   test('Should double likes of object', ()=> {
     expect(doubleLikes(artists)).toEqual([
       {name: 'a', likes:200},
-      {name: 'c', likes:198},
+      {name: 'b', likes:198},
       {name: 'c', likes:202}, 
+    ])
+  })
+})
+
+describe('moreThan100Likes Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'b', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should return objects with more than 100 likes', ()=> {
+    expect(moreThan100Likes(artists)).toEqual([
+      {name: 'c', likes:101} 
     ])
   })
 })
