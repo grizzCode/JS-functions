@@ -10,7 +10,8 @@ import {
   sortArray,
   doubleLikes,
   moreThan100Likes,
-  justArtistMoreThan100Likes
+  justArtistMoreThan100Likes,
+  numberOfLikes
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -129,5 +130,17 @@ describe('justArtistMoreThan100Likes Test:', ()=> {
   
   test('Should return artist name only in array that has more than 100 likes', ()=> {
     expect(justArtistMoreThan100Likes(artists)).toEqual(['c'])
+  })
+})
+
+describe('numberOfLikes Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'b', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should return sum of all likes in array', ()=> {
+    expect(numberOfLikes(artists)).toEqual(300)
   })
 })

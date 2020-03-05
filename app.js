@@ -74,8 +74,9 @@ export const justArtistMoreThan100Likes = (artists) => {
 
 
 // // get total number of likes for all artists
-// numberOfLikes(artists) //=> 300; // get all likes
-
+export const numberOfLikes = (artists) => {
+  return artists.reduce((sum,current) => sum + current.likes, 0)
+} 
 
 // // find an item method. Returns 'not found' if not found
 
