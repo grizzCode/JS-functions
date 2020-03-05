@@ -63,17 +63,14 @@ export const doubleLikes = (artists) => {
 }
 
 export const moreThan100Likes = (artists) => {
-  let filteredArtists = artists.filter(x => x.likes > 100)
-  return filteredArtists
+  return artists.filter(x => x.likes > 100)
 }
 
-
-// =>[ {name: 'c', likes:101} ]; // use filter
 //  return an array of strings of artist name
-
-// justArtistMoreThan100Likes(artists) //=> ['c']; // use filter
-
-
+export const justArtistMoreThan100Likes = (artists) => {
+  let filtered = artists.filter(x => x.likes > 100)
+  return filtered.map(a => a.name)
+} 
 
 
 // // get total number of likes for all artists

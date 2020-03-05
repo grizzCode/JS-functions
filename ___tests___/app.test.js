@@ -9,7 +9,8 @@ import {
   findItem,
   sortArray,
   doubleLikes,
-  moreThan100Likes
+  moreThan100Likes,
+  justArtistMoreThan100Likes
 } from '../app'
 
 describe('originalArray Tests:', ()=>{
@@ -116,5 +117,17 @@ describe('moreThan100Likes Test:', ()=> {
     expect(moreThan100Likes(artists)).toEqual([
       {name: 'c', likes:101} 
     ])
+  })
+})
+
+describe('justArtistMoreThan100Likes Test:', ()=> {
+  let artists = [
+    {name: 'a', likes:100},
+    {name: 'b', likes:99},
+    {name: 'c', likes:101}, 
+  ]
+  
+  test('Should return artist name only in array that has more than 100 likes', ()=> {
+    expect(justArtistMoreThan100Likes(artists)).toEqual(['c'])
   })
 })
